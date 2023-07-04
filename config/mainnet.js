@@ -9,8 +9,8 @@ module.exports = {
   v3: {
     wNativeStablePoolAddress: "0x6ca298d2983ab03aa1da7679389d955a4efee15c",
     stableIsToken0: false,
-    factoryAddress: "0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865",
-    startBlock: 16950686,
+    factoryAddress: "0x2cb62aEBa8eB609020129983A5141DB883abca85",
+    startBlock: 29208435,
     stableCoins: [
       "0x6b175474e89094c44da98b954eedeac495271d0f", // DAI
       "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", // USDC
@@ -43,13 +43,15 @@ module.exports = {
       "0xfe2e637202056d30016725477c5da089ab0a043a", // sETH2
       "0x152649ea73beab28c5b49b26eb48f7ead6d4c898", // CAKE
       "0x5e8422345238f34275888049021821e8e08caa1f", // fraxETH
+      "0x6e64fCF15Be3eB71C3d42AcF44D85bB119b2D98b", // CBON
+      "0x76e112203eF59D445452ef7556386dD2DF3Ed914" // CADINU
     ],
-    nonfungiblePositionManagerAddress: "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
-    nonfungiblePositionManagerStartBlock: 16944786,
+    nonfungiblePositionManagerAddress: "0x0C26558A7Bf8be790774fc84De8e5229A4dB5BA1",
+    nonfungiblePositionManagerStartBlock: 29238662,
     minETHLocked: 5,
   },
   masterChefV3: {
-    masterChefAddress: "0x556b9306565093c855aea9ae92a594704c2cd59e",
-    startBlock: 16945103,
+    masterChefAddress: "0x8C1ec68fE9478F5B915390F0CA57f1F2A039EBae",
+    startBlock: 29639542,
   },
 };

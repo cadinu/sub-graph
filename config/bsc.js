@@ -8,8 +8,8 @@ module.exports = {
     // WBNB-USDT 500
     wNativeStablePoolAddress: "0x36696169c63e42cd08ce11f5deebbcebae652050",
     stableIsToken0: true,
-    factoryAddress: "0x0bfbcf9fa4f9c56b0f40a671ad40e0805a091865",
-    startBlock: 26956207,
+    factoryAddress: "0x2cb62aEBa8eB609020129983A5141DB883abca85",
+    startBlock: 29208435,
     stableCoins: [
       "0x55d398326f99059ff775485246999027b3197955", // USDT
       "0xe9e7cea3dedca5984780bafc599bd69add087d56", // BUSD
@@ -22,14 +22,15 @@ module.exports = {
       "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d", // USDC
       "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c", // BTCB
       "0x2170ed0880ac9a755fd29b2688956bd959f933f8", // WETH
-      "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82", // CAKE
+      "0x6e64fCF15Be3eB71C3d42AcF44D85bB119b2D98b", // CBON
+      "0x76e112203eF59D445452ef7556386dD2DF3Ed914", // CADINU
     ],
-    nonfungiblePositionManagerAddress: "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
-    nonfungiblePositionManagerStartBlock: 26931961,
+    nonfungiblePositionManagerAddress: "0x0C26558A7Bf8be790774fc84De8e5229A4dB5BA1",
+    nonfungiblePositionManagerStartBlock: 29238662,
     minETHLocked: 10,
   },
   masterChefV3: {
-    masterChefAddress: "0x556b9306565093c855aea9ae92a594704c2cd59e",
-    startBlock: 26933904,
+    masterChefAddress: "0x8C1ec68fE9478F5B915390F0CA57f1F2A039EBae",
+    startBlock: 29639542,
   },
 };

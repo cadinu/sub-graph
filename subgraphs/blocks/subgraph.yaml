@@ -1,7 +1,6 @@
 specVersion: 0.0.2
 description: Binance Smart Chain Blocks
-repository: https://github.com/pancakeswap
-schema:
+repository: https://github.com/cadinu
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
