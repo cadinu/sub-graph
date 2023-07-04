@@ -19,23 +19,23 @@ export class StaticTokenDefinition {
   static getStaticDefinitions(): Array<StaticTokenDefinition> {
     let staticDefinitions = new Array<StaticTokenDefinition>(6);
 
-    // Add DGD
-    let tokenDGD = new StaticTokenDefinition(
-      Address.fromString("0xe0b7927c4af23765cb51314a0e0521a9645f0e2a"),
-      "DGD",
-      "DGD",
-      BigInt.fromI32(9)
-    );
-    staticDefinitions.push(tokenDGD);
-
-    // Add AAVE
-    let tokenAAVE = new StaticTokenDefinition(
-      Address.fromString("0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9"),
-      "AAVE",
-      "Aave Token",
+    // Add CBON
+    let tokenCBON = new StaticTokenDefinition(
+      Address.fromString("0x6e64fCF15Be3eB71C3d42AcF44D85bB119b2D98b"),
+      "CBON",
+      "CADINU Bonus",
       BigInt.fromI32(18)
     );
-    staticDefinitions.push(tokenAAVE);
+    staticDefinitions.push(tokenCBON);
+
+    // Add CADINU
+    let tokenCADINU = new StaticTokenDefinition(
+      Address.fromString("0x76e112203eF59D445452ef7556386dD2DF3Ed914"),
+      "CADINU",
+      "Canadian Inuit Dog V2",
+      BigInt.fromI32(18)
+    );
+    staticDefinitions.push(tokenCBON);
 
     // Add LIF
     let tokenLIF = new StaticTokenDefinition(

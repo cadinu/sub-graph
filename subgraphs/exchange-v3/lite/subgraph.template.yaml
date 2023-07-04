@@ -1,6 +1,6 @@
 specVersion: 0.0.2
-description: PancakeSwap is a multi-chain decentralized exchange and automated market maker protocol.
-repository: https://github.com/pancakeswap/pancake-subgraph
+description: CadinuSwap is a decentralized exchange and automated market maker protocol.
+repository: https://github.com/cadinu/sub-graph
 schema:
   file: ./schema.graphql
 features:

@@ -716,7 +716,7 @@
         "type": "bytes"
       }
     ],
-    "name": "pancakeV3MintCallback",
+    "name": "cadinuV3MintCallback",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
