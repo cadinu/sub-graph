@@ -43,7 +43,7 @@ type User @entity {
   totalTickets: BigInt!
   rounds: [Round!]! @derivedFrom(field: "user")
 
-  totalCake: BigDecimal!
+  totalCadinu: BigDecimal!
 
   "Block number"
   block: BigInt!
