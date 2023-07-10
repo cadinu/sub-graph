@@ -17,8 +17,8 @@ import {
 
 let ZERO_BI = BigInt.fromI32(0);
 let ONE_BI = BigInt.fromI32(1);
-let FACTORY_ADDRESS = "0x927158be21fe3d4da7e96931bb27fd5059a8cbc2";
-let FACTORY_V2_ADDRESS = "0xFfF5812C35eC100dF51D5C9842e8cC3fe60f9ad7";
+let FACTORY_ADDRESS = "0xA99113Be0846557eaE74c5733aF2f363E9949075";
+let FACTORY_V2_ADDRESS = "0xB0d1f8Ba24F305F81313DEa97e1425bC075f811b";
 
 export function handleNewSmartChefContract(event: NewSmartChefContract): void {
   // Do not process some SmartChef smart contract, hiccup.
