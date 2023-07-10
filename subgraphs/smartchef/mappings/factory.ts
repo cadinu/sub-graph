@@ -17,26 +17,7 @@ import {
 
 let ZERO_BI = BigInt.fromI32(0);
 let ONE_BI = BigInt.fromI32(1);
-// let FACTORY_ADDRESS = "0x927158be21fe3d4da7e96931bb27fd5059a8cbc2";
 let FACTORY_V2_ADDRESS = "0xB0d1f8Ba24F305F81313DEa97e1425bC075f811b";
-
-// export function handleNewSmartChefContract(event: NewSmartChefContract): void {
-//   // Do not process some SmartChef smart contract, hiccup.
-//   if (BLACKLISTED_ADDRESSES.includes(event.params.smartChef.toHex())) {
-//     return;
-//   }
-
-//     let factory = Factory.load(FACTORY_ADDRESS);
-//     if (factory === null) {
-//       factory = new Factory(FACTORY_ADDRESS);
-//       factory.totalSmartChef = ZERO_BI;
-//       factory.save();
-//     }
-//     factory.totalSmartChef = factory.totalSmartChef.plus(ONE_BI);
-//     factory.save();
-
-//     process(event);
-//   }
 
 export function handleNewSmartChefContractV2(event: NewSmartChefContract): void {
   let factory = Factory.load(FACTORY_V2_ADDRESS);
