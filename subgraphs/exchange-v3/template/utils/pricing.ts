@@ -8,7 +8,8 @@ import { exponentToBigDecimal, safeDiv } from "./index";
 const WETH_ADDRESS = "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c";
 // prettier-ignore
 // const USDC_WETH_03_POOL = "0x172fcD41E0913e95784454622d1c3724f546f849";
-const USDC_WETH_03_POOL = "0x36696169c63e42cd08ce11f5deebbcebae652050";
+// const USDC_WETH_03_POOL = "0x36696169c63e42cd08ce11f5deebbcebae652050";
+const USDC_WETH_03_POOL = "0x007a6d6504AF2a41b1Ccb5eb52b6c62b2e55572a";
 
 // const STABLE_IS_TOKEN0 = "false" as string;
 const STABLE_IS_TOKEN0 = "true" as string;
@@ -20,7 +21,7 @@ export let WHITELIST_TOKENS: string[] = "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc0
 // prettier-ignore
 let STABLE_COINS: string[] = "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3,0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56,0x55d398326f99059fF775485246999027B3197955".split(",");
 
-let MINIMUM_ETH_LOCKED = BigDecimal.fromString("0.00001");
+let MINIMUM_ETH_LOCKED = BigDecimal.fromString("-1");
 
 let Q192 = 2 ** 192;
 export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, token1: Token): BigDecimal[] {

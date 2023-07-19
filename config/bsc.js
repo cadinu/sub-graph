@@ -6,7 +6,8 @@ module.exports = {
   wNativeAddress: "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
   v3: {
     // WBNB-USDT 500
-    wNativeStablePoolAddress: "0x36696169c63e42cd08ce11f5deebbcebae652050",
+    // wNativeStablePoolAddress: "0x36696169c63e42cd08ce11f5deebbcebae652050",
+    wNativeStablePoolAddress: "0x007a6d6504AF2a41b1Ccb5eb52b6c62b2e55572a",
     stableIsToken0: true,
     factoryAddress: "0x2cb62aEBa8eB609020129983A5141DB883abca85",
     startBlock: 29208435,
@@ -27,7 +28,7 @@ module.exports = {
     ],
     nonfungiblePositionManagerAddress: "0x0C26558A7Bf8be790774fc84De8e5229A4dB5BA1",
     nonfungiblePositionManagerStartBlock: 29238662,
-    minETHLocked: 10,
+    minETHLocked: -1,
   },
   masterChefV3: {
     masterChefAddress: "0x8C1ec68fE9478F5B915390F0CA57f1F2A039EBae",
