@@ -26,7 +26,7 @@ import {
   updateTickDayData,
   updateTokenDayData,
   updateTokenHourData,
-  updatePancakeDayData,
+  updateCadinuDayData,
 } from "../utils/intervalUpdates";
 import { createTick, feeTierToTickSpacing } from "../utils/tick";
 import { updateDerivedTVLAmounts } from "../utils/tvl";
@@ -151,7 +151,7 @@ export function handleMint(event: MintEvent): void {
   // TODO: Update Tick's volume, fees, and liquidity provider count. Computing these on the tick
   // level requires reimplementing some of the swapping code from v3-core.
 
-  updatePancakeDayData(event);
+  updateCadinuDayData(event);
   updatePoolDayData(event);
   updatePoolHourData(event);
   updateTokenDayData(token0 as Token, event);
@@ -246,7 +246,7 @@ export function handleBurn(event: BurnEvent): void {
   upperTick.liquidityGross = upperTick.liquidityGross.minus(amount);
   upperTick.liquidityNet = upperTick.liquidityNet.plus(amount);
 
-  updatePancakeDayData(event);
+  updateCadinuDayData(event);
   updatePoolDayData(event);
   updatePoolHourData(event);
   updateTokenDayData(token0 as Token, event);
@@ -400,7 +400,7 @@ export function handleSwap(event: SwapEvent): void {
   pool.feeGrowthGlobal1X128 = feeGrowthGlobal1X128 as BigInt;
 
   // interval data
-  let pancakeDayData = updatePancakeDayData(event);
+  let cadinuDayData = updateCadinuDayData(event);
   let poolDayData = updatePoolDayData(event);
   let poolHourData = updatePoolHourData(event);
   let token0DayData = updateTokenDayData(token0 as Token, event);
@@ -409,10 +409,10 @@ export function handleSwap(event: SwapEvent): void {
   let token1HourData = updateTokenHourData(token1 as Token, event);
 
   // update volume metrics
-  pancakeDayData.volumeETH = pancakeDayData.volumeETH.plus(volumeETH);
-  pancakeDayData.volumeUSD = pancakeDayData.volumeUSD.plus(volumeUSD);
-  pancakeDayData.feesUSD = pancakeDayData.feesUSD.plus(feesUSD);
-  pancakeDayData.protocolFeesUSD = pancakeDayData.protocolFeesUSD.plus(protocolFeeAmounts.usd);
+  cadinuDayData.volumeETH = cadinuDayData.volumeETH.plus(volumeETH);
+  cadinuDayData.volumeUSD = cadinuDayData.volumeUSD.plus(volumeUSD);
+  cadinuDayData.feesUSD = cadinuDayData.feesUSD.plus(feesUSD);
+  cadinuDayData.protocolFeesUSD = cadinuDayData.protocolFeesUSD.plus(protocolFeeAmounts.usd);
 
   poolDayData.volumeUSD = poolDayData.volumeUSD.plus(volumeUSD);
   poolDayData.volumeToken0 = poolDayData.volumeToken0.plus(amount0Abs);
@@ -452,7 +452,7 @@ export function handleSwap(event: SwapEvent): void {
 
   swap.save();
   factory.save();
-  pancakeDayData.save();
+  cadinuDayData.save();
   pool.save();
   poolDayData.save();
   poolHourData.save();

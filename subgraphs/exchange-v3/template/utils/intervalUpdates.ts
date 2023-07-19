@@ -1,7 +1,7 @@
 import { ZERO_BD, ZERO_BI, ONE_BI } from "./constants";
 /* eslint-disable prefer-const */
 import {
-  PancakeDayData,
+  CadinuDayData,
   Factory,
   Pool,
   PoolDayData,
@@ -20,25 +20,25 @@ import { ethereum } from "@graphprotocol/graph-ts";
  * Tracks global aggregate data over daily windows
  * @param event
  */
-export function updatePancakeDayData(event: ethereum.Event): PancakeDayData {
-  let pancake = Factory.load(FACTORY_ADDRESS);
+export function updateCadinuDayData(event: ethereum.Event): CadinuDayData {
+  let cadinu = Factory.load(FACTORY_ADDRESS);
   let timestamp = event.block.timestamp.toI32();
   let dayID = timestamp / 86400; // rounded
   let dayStartTimestamp = dayID * 86400;
-  let pancakeDayData = PancakeDayData.load(dayID.toString());
-  if (pancakeDayData === null) {
-    pancakeDayData = new PancakeDayData(dayID.toString());
-    pancakeDayData.date = dayStartTimestamp;
-    pancakeDayData.volumeETH = ZERO_BD;
-    pancakeDayData.volumeUSD = ZERO_BD;
-    pancakeDayData.volumeUSDUntracked = ZERO_BD;
-    pancakeDayData.feesUSD = ZERO_BD;
-    pancakeDayData.protocolFeesUSD = ZERO_BD;
+  let cadinuDayData = CadinuDayData.load(dayID.toString());
+  if (cadinuDayData === null) {
+    cadinuDayData = new CadinuDayData(dayID.toString());
+    cadinuDayData.date = dayStartTimestamp;
+    cadinuDayData.volumeETH = ZERO_BD;
+    cadinuDayData.volumeUSD = ZERO_BD;
+    cadinuDayData.volumeUSDUntracked = ZERO_BD;
+    cadinuDayData.feesUSD = ZERO_BD;
+    cadinuDayData.protocolFeesUSD = ZERO_BD;
   }
-  pancakeDayData.tvlUSD = pancake.totalValueLockedUSD;
-  pancakeDayData.txCount = pancake.txCount;
-  pancakeDayData.save();
-  return pancakeDayData as PancakeDayData;
+  cadinuDayData.tvlUSD = cadinu.totalValueLockedUSD;
+  cadinuDayData.txCount = cadinu.txCount;
+  cadinuDayData.save();
+  return cadinuDayData as CadinuDayData;
 }
 
 export function updatePoolDayData(event: ethereum.Event): PoolDayData {
