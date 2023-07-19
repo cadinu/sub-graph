@@ -20,7 +20,7 @@ export let WHITELIST_TOKENS: string[] = "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc0
 // prettier-ignore
 let STABLE_COINS: string[] = "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3,0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56,0x55d398326f99059fF775485246999027B3197955".split(",");
 
-let MINIMUM_ETH_LOCKED = BigDecimal.fromString("1");
+let MINIMUM_ETH_LOCKED = BigDecimal.fromString("0.00001");
 
 let Q192 = 2 ** 192;
 export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, token1: Token): BigDecimal[] {
