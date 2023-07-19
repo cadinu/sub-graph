@@ -40,7 +40,8 @@ export function getEthPriceInUSD(): BigDecimal {
     }
     return usdcPool.token1Price;
   } else {
-    return ZERO_BD;
+    // return ZERO_BD;
+    return BigDecimal.fromString("1")
   }
 }
 
