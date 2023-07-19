@@ -7,9 +7,11 @@ import { exponentToBigDecimal, safeDiv } from "./index";
 // prettier-ignore
 const WETH_ADDRESS = "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c";
 // prettier-ignore
-const USDC_WETH_03_POOL = "0x172fcD41E0913e95784454622d1c3724f546f849";
+// const USDC_WETH_03_POOL = "0x172fcD41E0913e95784454622d1c3724f546f849";
+const USDC_WETH_03_POOL = "0x36696169c63e42cd08ce11f5deebbcebae652050";
 
-const STABLE_IS_TOKEN0 = "false" as string;
+// const STABLE_IS_TOKEN0 = "false" as string;
+const STABLE_IS_TOKEN0 = "true" as string;
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with s
