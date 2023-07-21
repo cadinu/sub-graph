@@ -7,9 +7,9 @@ import { exponentToBigDecimal, safeDiv } from "./index";
 // prettier-ignore
 const WETH_ADDRESS = "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c";
 // prettier-ignore
-// const USDC_WETH_03_POOL = "0x172fcD41E0913e95784454622d1c3724f546f849";
-// const USDC_WETH_03_POOL = "0x36696169c63e42cd08ce11f5deebbcebae652050";
-const USDC_WETH_03_POOL = "0x007a6d6504AF2a41b1Ccb5eb52b6c62b2e55572a";
+// const USDC_WETH_03_POOL = "0x172fcD41E0913e95784454622d1c3724f546f849"; // Pancake
+// const USDC_WETH_03_POOL = "0x36696169c63e42cd08ce11f5deebbcebae652050"; // Pancake in config
+const USDC_WETH_03_POOL = "0x007a6d6504AF2a41b1Ccb5eb52b6c62b2e55572a"; // CadinuSwap
 
 // const STABLE_IS_TOKEN0 = "false" as string;
 const STABLE_IS_TOKEN0 = "true" as string;
@@ -17,11 +17,11 @@ const STABLE_IS_TOKEN0 = "true" as string;
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with s
 // prettier-ignore
-export let WHITELIST_TOKENS: string[] = "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c,0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3,0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c,0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56,0x55d398326f99059fF775485246999027B3197955,0x76e112203eF59D445452ef7556386dD2DF3Ed914,0x6e64fCF15Be3eB71C3d42AcF44D85bB119b2D98b".split(",");
+export let WHITELIST_TOKENS: string[] = "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c,0x55d398326f99059ff775485246999027b3197955,0xe9e7cea3dedca5984780bafc599bd69add087d56,0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d,0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c,0x2170ed0880ac9a755fd29b2688956bd959f933f8,0x6e64fCF15Be3eB71C3d42AcF44D85bB119b2D98b,0x76e112203eF59D445452ef7556386dD2DF3Ed914".split(",");
 // prettier-ignore
-let STABLE_COINS: string[] = "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3,0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56,0x55d398326f99059fF775485246999027B3197955".split(",");
+let STABLE_COINS: string[] = "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d,0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56,0x55d398326f99059fF775485246999027B3197955".split(",");
 
-let MINIMUM_ETH_LOCKED = BigDecimal.fromString("-1");
+let MINIMUM_ETH_LOCKED = BigDecimal.fromString("0");
 
 let Q192 = 2 ** 192;
 export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, token1: Token): BigDecimal[] {
@@ -42,8 +42,7 @@ export function getEthPriceInUSD(): BigDecimal {
     }
     return usdcPool.token1Price;
   } else {
-    // return ZERO_BD;
-    return BigDecimal.fromString("1")
+    return ZERO_BD;
   }
 }
 
