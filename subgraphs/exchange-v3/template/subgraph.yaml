@@ -10,7 +10,7 @@ dataSources:
     name: Factory
     network: bsc
     source:
-      address: "0x2cb62aEBa8eB609020129983A5141DB883abca85"
+      address: "0x2cb62aeba8eb609020129983a5141db883abca85"
       abi: Factory
       startBlock: 29208430
     mapping:
@@ -39,7 +39,7 @@ dataSources:
     name: NonfungiblePositionManager
     network: bsc
     source:
-      address: "0x0C26558A7Bf8be790774fc84De8e5229A4dB5BA1"
+      address: "0x0c26558a7bf8be790774fc84de8e5229a4db5ba1"
       abi: NonfungiblePositionManager
       startBlock: 29238660
     mapping:
