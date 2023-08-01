@@ -15,7 +15,7 @@ Currently, there are multiple subgraphs, but additional subgraphs can be added t
 
 
 4. **Exchange (v3)**: Tracks all CadinuSwap V3 Exchange data with price, volume, liquidity
-    - BSC https://thegraph.com/hosted-service/subgraph/cadinu/exchange-v3-lite
+    - BSC https://thegraph.com/hosted-service/subgraph/cadinu/exchange-v3-bsc
 
 
 ## Dependencies
